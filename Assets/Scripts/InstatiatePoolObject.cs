@@ -12,22 +12,23 @@ public class InstatiatePoolObject : MonoBehaviour
     private Transform _parent;
 
     private List<GameObject> _pool = new();
+    private GameObject _currentObject;
 
     public void InstatiateObject(Transform target)
     {
-        GameObject obj = GetPooledObject();
-        if (obj != null)
+        _currentObject = GetPooledObject();
+        if (_currentObject != null)
         {
-            PositionObject(obj, target.position, target.rotation);  
+            PositionObject(obj, target.position, target.rotation);
         }
     }
 
     public void InstatiateObject(Vector3 position)
     {
-        GameObject obj = GetPooledObject();
-        if (obj != null)
+        _currentObject = GetPooledObject();
+        if (_currentObject != null)
         {
-            PositionObject(obj, position, Quaternion.identity);
+            PositionObject(_currentObject, position, Quaternion.identity);
         }
     }
 
