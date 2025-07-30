@@ -19,7 +19,7 @@ public class InstatiatePoolObject : MonoBehaviour
         _currentObject = GetPooledObject();
         if (_currentObject != null)
         {
-            PositionObject(obj, target.position, target.rotation);
+            PositionObject(_currentObject, target.position, target.rotation);
         }
     }
 

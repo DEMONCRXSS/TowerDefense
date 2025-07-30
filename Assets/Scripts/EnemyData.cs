@@ -10,7 +10,7 @@ public class EnemyData : ScriptableObject
     public float attackWaitTime = 0.5f;
     public string runAnimationName = "Run";
     public string attackAnimationName = "Attack";
-    public string deathAnimationName = "Death";
+    public string dieAnimationName = "Death";
     public string hitAnimationName = "Hit";
     public string winAnimationName = "Win";
 }

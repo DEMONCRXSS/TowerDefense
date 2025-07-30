@@ -570,6 +570,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Zombie
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: b03bf5e3e23b9d9478bd035528fb8e2f, type: 3}
+      propertyPath: m_TagString
+      value: Enemy
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:
@@ -586,6 +590,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: b03bf5e3e23b9d9478bd035528fb8e2f, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1443234000969575939}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: b03bf5e3e23b9d9478bd035528fb8e2f, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: -3078071641683108462}
   m_SourcePrefab: {fileID: 100100000, guid: b03bf5e3e23b9d9478bd035528fb8e2f, type: 3}
 --- !u!1 &108297464569854929 stripped
 GameObject:
@@ -648,7 +655,43 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _animator: {fileID: 3777530126930210697}
   _enemyData: {fileID: 11400000, guid: 34854c3d137023f4db3eaa71070105b3, type: 2}
+  _onInitialized:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 404940955295266568}
+        m_TargetAssemblyTypeName: Health, Assembly-CSharp
+        m_MethodName: InitializeHealth
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   _targetTag: Tower
+--- !u!65 &-3078071641683108462
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 108297464569854929}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 2.79, z: 1}
+  m_Center: {x: 0, y: 0.92, z: 0}
 --- !u!4 &777837771438072171 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: b03bf5e3e23b9d9478bd035528fb8e2f, type: 3}
